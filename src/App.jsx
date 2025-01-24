@@ -56,9 +56,9 @@ function App() {
 
     }
   }
-  let removeCart = (cart, index) => {
+  let removeCart = (cart, cartProduct,index) => {
     console.log("cart=====>", cart);
-    setTotalAmount(parseFloat((totalAmount - cart[index].price).toFixed(2)));
+    setTotalAmount(parseFloat((totalAmount - ((cartProduct.quantity)*(cartProduct.price))).toFixed(2)));
     cart.splice(index, 1);
     setCart([...cart]);
     setCartTotal(cartTotal - 1);

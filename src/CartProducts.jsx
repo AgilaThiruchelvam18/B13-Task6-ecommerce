@@ -32,7 +32,7 @@ function CartProducts(props) {
                     </div> </div>
                     <div className='text-center text-sm font-bold text '><button className="border border-black p-2 hover:bg-gray-200" onClick={()=>{props.increment(cartProduct);}}>+</button> <span>{`${cartProduct.quantity}`}</span><button className="border border-black p-2 hover:bg-gray-200 " onClick={()=>{props.decrement(cartProduct);}}>-</button></div>
                    <div className="flex justify-between"> <div className='text-center text-sm font-bold text '>{(cartProduct.quantity)*(cartProduct.price)}</div>    
-                    <div className=""><button className="bg-red-800 p-1 text-white hover:bg-red-600" onClick={() => { props.removeCart(props.cart, index); }} >remove</button></div>
+                    <div className=""><button className="bg-red-800 p-1 text-white hover:bg-red-600" onClick={() => { props.removeCart(props.cart, cartProduct,index); }} >remove</button></div>
                    </div>
                  
                 </div>
